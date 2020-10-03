@@ -32,7 +32,7 @@ else
 
 obj-m := fl2000.o
 
-#KERNEL_PATH = /usr/lib/modules/`uname -r`/build
+KERNEL_PATH = /usr/lib/modules/`uname -r`/build
 
 all:
 	make -C $(KERNEL_PATH) M=$(shell pwd) modules
