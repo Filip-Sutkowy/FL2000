@@ -32,7 +32,8 @@ else
 
 obj-m := fl2000.o
 
-KERNEL_PATH = /usr/lib/modules/`uname -r`/build
+#KERNEL_PATH = /usr/lib/modules/`uname -r`/build
+KERNEL_PATH = /home/desto2/linux54/src/linux-5.4
 
 all:
 	make -C $(KERNEL_PATH) M=$(shell pwd) modules
