@@ -33,13 +33,13 @@ else
 obj-m := fl2000.o
 
 #KERNEL_PATH = /usr/lib/modules/`uname -r`/build
-KERNEL_PATH = /usr/lib/modules/5.4.64-1-MANJARO/build
+KERNEL_PATH = /lib/modules/5.4.64-1-MANJARO/build
 
 all:
-	make -C $(KERNEL_PATH) M=$(PWD) modules
+	make -C $(KERNEL_PATH) M=$(shell pwd) modules
 
 clean:
-	make -C $(KERNEL_PATH) M=$(PWD) clean
+	make -C $(KERNEL_PATH) M=$(shell pwd) clean
 	rm -f Module.symvers
 
 endif
